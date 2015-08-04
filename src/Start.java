@@ -5,9 +5,10 @@
 /*
 *
 *
-* Basic Notation: Note this program print a message in the screen,
+* First Notation: Note this program print a message on the screen,
 *                 and it is formed with only a main Class, that means,
-*                 it is just a class with a main method in it.
+*                 it is just a class with a main method in it, it scare me
+*                 a lot, I'm laughing very much. xD
 *
 *                 Note that the can have another class on it, and works totally
 *                 different from a custom main in C++.
