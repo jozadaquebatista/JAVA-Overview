@@ -61,6 +61,8 @@ public class cThread3
     Thread t18 = new Thread(new Tuna("eighteen"));
     Thread t19 = new Thread(new Tuna("nineteen"));
     Thread t20 = new Thread(new Tuna("twenty"));
+    Thread outraThread = new Thread();
+    outraThread.run();
 
     /* This doesn't Works D=
     
