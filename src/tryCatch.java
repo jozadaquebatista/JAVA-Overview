@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.lang.Exception; /* Exceptions do not need import */
 
 class Div
 {

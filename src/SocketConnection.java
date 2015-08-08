@@ -22,7 +22,8 @@ class ServerSocketConnection
 public class SocketConnection
 {
 
-  public static void main(String[] args) throws UnknownHostException, InterruptedException, ConnectException, IOException
+  public static void main(String[] args) throws UnknownHostException, 
+  InterruptedException, ConnectException, IOException
   {
   
     /* PORTS 0 - 1023 reserved by the operating system. */
@@ -39,7 +40,7 @@ public class SocketConnection
       System.out.println("Conexao realizada sem erros.");
       
       Thread.sleep(3000);
-      //for(long i=0; i < 1000000000; i++) for(long j=0; j < 4; j++); // CRAZY CRAZY DELAY
+      //for(long i=0; i < 1000000000; i++) for(long j=0; j < 4; j++); // VERY VERY CRAZY DELAY =D
     
     } catch(ConnectException e) {
       
