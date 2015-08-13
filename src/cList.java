@@ -26,7 +26,17 @@ public class cList
   
     System.out.println(list.get(3));
     System.out.println(list.set(3, "Natação".toUpperCase())); 
-    System.out.println(list.toString()); 
+    System.out.println(list.toString());
+    System.out.println(list.indexOf("Boxe"));
+    System.out.println(list.subList(2, 4));
+    
+    list.add(list.subList(2, 4).toString());
+    
+    System.out.println(list.toString());
+    
+    list.subList(4,6).clear();
+    list.remove(2);
+    System.out.println(list.toString());
   }
   
 
