@@ -1,19 +1,19 @@
-package Observer.observer;
-
+import java.lang.Thread;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Date;
 
 public class doorMan extends Thread
 {
 
-  private List<eventArrivalOfEvent> observers = new ArrayList<eventArrivalOfEvent>();
+  private List<eventArrivalOfObserver> observers = new ArrayList<>();
   
-  public void addEventArrivalOfEvent(eventArrivalOfEvent observer)
+  public void addEventArrivalOfObserver(eventArrivalOfObserver observer)
   {
     this.observers.add(observer);
   }
 
-  @override
   public void run()
   {
     Scanner scanner = new Scanner(System.in);
@@ -24,13 +24,14 @@ public class doorMan extends Thread
     
       if(value == 1)
       {
-        eventArrivalOfEvent event = new eventArrivalOfEvent(new Date());
+        eventArrivalOfPerson event = new eventArrivalOfPerson(new Date());
         
         // Notify observers
-        for(eventArrivalOfEvent observer : this.observers)
+        for(eventArrivalOfObserver observer : this.observers)
         {
-          observer.Arrival(event);
+          observer.arrival(event);
         }
+        
       } else {
         
         System.out.println("False alarm!");
