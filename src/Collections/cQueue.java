@@ -9,6 +9,8 @@ public class cQueue
   
     Queue<String> queue = new LinkedList<>();
     
+    
+    // FIFO
     // This is how we can add elements in the queue
     queue.add("Jozadaque");
     queue.add("Elena");

@@ -11,7 +11,7 @@ class Recursive
   
   static int Looping(int i)
   {
-    System.out.println("I'm the var ()'i') = " + i + ", and I'm inside the recursive function.");
+    System.out.println("I'm the var ('i') = " + i + ", and I'm inside the recursive function.");
     i++;
       
     if(i != 10)
@@ -45,11 +45,13 @@ public class cLoops
   *  Other way to get this same effect, is by using recursive functions
   *  However this way probably can give us a stack overflow.
    */
-
+  
+  {
     // we'll use this variable soon.
     int varloop = 0;
     
     (new Recursive()).Looping(varloop); // executes a recursive function
+  }
   }
   
 }

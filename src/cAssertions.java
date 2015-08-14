@@ -17,7 +17,9 @@ public class cAssertions
     /*
     *  Assertions should be used to verify errors in programming time,
     *  and should be turned off after.
-    *  To run this program and see assertions type in prompt line: java -ea cAssertions
+    *  To run this program and see assertions type in prompt line: 
+    *  -> java -ea cAssertions OR
+    *  -> java -enableassertion cAssertions
     *  after compile.
      */
     
