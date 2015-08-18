@@ -20,10 +20,10 @@ public class withoutGenerics
     
     List myList = new ArrayList(10);
     
-    myList.add(5);
-    myList.add(8);
-    myList.add(1);
-    myList.add(6);
+    myList.add("Marcos");
+    myList.add("Weslley");
+    myList.add("Bruno");
+    myList.add("Joao");
     
     
     
@@ -31,18 +31,27 @@ public class withoutGenerics
     System.out.println(myList.get(1));
     
     // Making a iterator
-    Iterator<String> it = (String)myList.iterator();
+    Iterator it = myList.iterator();
     
     System.out.println();
     
     while(it.hasNext())
     {
     
-      System.out.print("This is element " + it.next() + " in position " + myList.indexOf(it.next()));
+      // As you can see casting objects is boring, awfull and tedious x_X
+      // This is why we use Generics( Yeeaaaahhh! B) )
+    
+      String tmp = (String)it.next();
+      
+      System.out.println("This is element " + tmp + " in position " + myList.indexOf(tmp));
     
     }
     
     System.out.println();
+  
+    String nameOfSomeOne = (String)myList.get(2);
+
+    System.out.println("nameOfSomeOne = " + nameOfSomeOne + ";" + "\n");
   
   }
 
