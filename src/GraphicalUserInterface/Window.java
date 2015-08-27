@@ -12,6 +12,8 @@ import javax.swing.JFrame;
 public class Window extends JFrame
 {
 
+
+    // Constructor method
     public Window(String title)
     {
 
@@ -26,7 +28,7 @@ public class Window extends JFrame
     public static void main(String[] args)
     {
 
-        new Window("My cute Window 1.0b");
+        new Window("My cute window 1.0b");
 
     }
 
