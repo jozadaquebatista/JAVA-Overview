@@ -2,8 +2,11 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class CopyBytes {
-    public static void main(String[] args) throws IOException {
+public class WorkingWithFiles // Copying Bytes
+{
+
+    static public void main(String[] args) throws IOException
+    {
 
         FileInputStream in = null;
         FileOutputStream out = null;
@@ -11,13 +14,14 @@ public class CopyBytes {
         try {
           
           /*
-          * This program catches content a file and write over another file.
+          * This program catches content of a file and write over another file.
            */
         
             in = new FileInputStream("inputFileTest.txt");
             out = new FileOutputStream("outputFileTest.txt");
             int c;
 
+            // This part checks if the reading reached the final of file
             while ((c = in.read()) != -1) {
                 out.write(c);
             }
