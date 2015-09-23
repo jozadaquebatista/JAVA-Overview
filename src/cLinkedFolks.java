@@ -59,7 +59,7 @@ public class cLinkedFolks
         
         while(list_it.hasNext())
         {
-            System.out.println("-> " + list_it.next());
+            System.out.println("\t-> " + list_it.next());
         }
                 
         for(Person element : clients)
