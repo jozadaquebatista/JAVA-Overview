@@ -5,7 +5,7 @@ import java.util.ListIterator;
 class Animal
 {
 
-    public Animal()
+    public void Animal()
     {
         System.out.println("Grrr ... ");    
     }
@@ -15,8 +15,8 @@ class Animal
 class Dog extends Animal
 {
 
-    @Override
-    public Animal()
+    
+    public void Say()
     {
         System.out.println("Woof ...");
     }
@@ -26,53 +26,44 @@ class Dog extends Animal
 class Cat extends Animal
 {
 
-    @Override
-    public Animal()
+    
+    public void Say()
     {
         System.out.println("Meow ...");
     }
 
 }
 
-public class cLinkedFolks
+public class cLinkedAnimals
 {
 
-    static
-    Person p1 = null,
-           p2 = null,
-           p3 = null,
-           p4 = null,
-           p5 = null;
+    static Dog dog = null;
+    static Cat cat = null;
 
-    public cLinkedFolks()
+    public cLinkedAnimals()
     {
-        //Person p1 = new Person("Jozadaque", 21);
-        //Person p2 = new Person("Estevão", 15);
-        //Person p3 = new Person("Stella", 25);
-        //Person p4 = new Person("Fabio", 18);
-        //Person p5 = new Person("Marcos", 20);
+        //Animal dog = new Dog();
+        //Animal cat = new Cat();
     }
     
     static public void main(String[] args)
     {
     
-        List<Person> clients = new LinkedList<Person>();
+        List<Animal> myLittleVirtualPets = new LinkedList<Animal>();
         
         int count = 0;
         
-        clients.add( new Person("Jozadaque", 21) );
-        clients.add( new Person("Estevão", 15) );
-        clients.add( new Person("Stella", 25) );
-        clients.add( new Person("Fabio", 18) );
-        clients.add( new Person("Marcos", 20) );
+        dog = new Dog();
+        cat = new Cat();
         
-        ListIterator list_it = clients.listIterator();
+        dog.Say();
+        cat.Say();
                 
-        System.out.println("Elements of LL clients: \n");
+        /*System.out.println("Elements of LL clients: \n");
         
         while(list_it.hasNext())
         {
-            System.out.println("-> " + list_it.next());
+            System.out.println("\t-> " + list_it.next());
         }
                 
         for(Person element : clients)
@@ -80,7 +71,7 @@ public class cLinkedFolks
             count += 1;
         }
                 
-        System.out.println("There are " + count + " in the List clients.\nExiting Now...");
+        System.out.println("There are " + count + " in the List clients.\nExiting Now...");*/
         
     }
 
