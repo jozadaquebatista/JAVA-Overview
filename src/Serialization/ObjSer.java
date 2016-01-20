@@ -14,7 +14,7 @@ public class ObjSer
 {
 	public static void main(String[] args)
 	{
-		boolean fileExists = new File("/tmp/org/com/jbatista/Serializacao/acc.ser").exists(); // OMG I'm a Genious! hahaha xD
+		boolean fileExists = new File("/tmp/org/com/jbatista/Serializacao/acc.ser").exists();
 
 		Acc acc=null,
 			accExtended = null;
@@ -108,7 +108,7 @@ public class ObjSer
 			System.out.println("OwnerInfo:" + field);
 		}
 
-		//  System.out.println( accExtended.rescuePasswd() );
+		// System.out.println( accExtended.rescuePasswd() );
 
 		accExtended.Exit();
 	}
