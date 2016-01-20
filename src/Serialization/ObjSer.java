@@ -10,6 +10,13 @@ import java.io.File;
 
 import java.util.Scanner;
 
+/*
+*
+* @author: Jozadaque Batista
+* This example, shows how to make an object serializable.
+*
+ */
+
 public class ObjSer
 {
     public static void main(String[] args)
