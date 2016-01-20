@@ -14,7 +14,7 @@ public class ObjSer
 {
 	public static void main(String[] args)
 	{
-		boolean fileExists = new File("/tmp/org/com/jbatista/Serializacao/Jozadaque.ser").exists(); // OMG I'm a Genious! hahaha xD
+		boolean fileExists = new File("/tmp/org/com/jbatista/Serializacao/acc.ser").exists(); // OMG I'm a Genious! hahaha xD
 
 		Acc acc=null,
 			accExtended = null;
@@ -32,7 +32,7 @@ public class ObjSer
 				case "y":
 					// Carrega o objeto se existir o arquivo .ser
 					try {
-						FileInputStream fis = new FileInputStream("org/com/jbatista/Serializacao/"+"Jozadaque.ser");
+						FileInputStream fis = new FileInputStream("org/com/jbatista/Serializacao/"+"acc.ser");
 						ObjectInputStream ois = new ObjectInputStream( fis );
 						acc = (Acc)ois.readObject();
 						ois.close();
@@ -47,16 +47,16 @@ public class ObjSer
 					}
 					break;
 				case "n":
-					new File("/tmp/org/com/jbatista/Serializacao/Jozadaque.ser").delete();
+					new File("/tmp/org/com/jbatista/Serializacao/acc.ser").delete();
 					System.exit(0);
 					break;
 			}
 
-			System.out.println("Ssa porra existe...");
+			System.out.println("File Exists...");
 		}
 		else
 		{
-			System.out.println("Isso non ecxisteee...");
+			System.out.println("File doesn't exists...");
 			acc = new Acc("Jozadaque", "Papoula");
 		}
 
@@ -72,7 +72,7 @@ public class ObjSer
 		System.out.println( (acc.getMoneyQuantity()==0.0)?("You already logged in?"):(acc.getMoneyQuantity()) );
 
 		try {
-			FileOutputStream fos = new FileOutputStream("org/com/jbatista/Serializacao/"+"Jozadaque.ser");
+			FileOutputStream fos = new FileOutputStream("org/com/jbatista/Serializacao/"+"acc.ser");
 			ObjectOutputStream oos = new ObjectOutputStream( fos );
 			oos.writeObject( acc );
 			oos.close();
@@ -85,7 +85,7 @@ public class ObjSer
 		}
 
 		try{
-			FileInputStream fis = new FileInputStream("org/com/jbatista/Serializacao/"+"Jozadaque.ser");
+			FileInputStream fis = new FileInputStream("org/com/jbatista/Serializacao/"+"acc.ser");
 			ObjectInputStream ois = new ObjectInputStream( fis );
 			accExtended = (Acc)ois.readObject();
 			ois.close();
